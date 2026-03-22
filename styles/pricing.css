@@ -1,0 +1,228 @@
+#pricing-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  height: 77.5rem;
+  margin-top: 20rem;
+}
+
+#pricing-container h2 {
+  text-align: center;
+  z-index: 3;
+  color: var(--text-title);
+}
+
+#pricing-container .pricing {
+  background-image: url(../assets/backgrounds/pricing-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 2rem;
+  position: relative;
+  margin-top: 4rem;
+  width: 65.625rem;
+  height: 37.875rem;
+}
+
+#pricing-container .pricing .card {
+  border-radius: 1.75rem;
+  background-color: var(--shape-base);
+  position: absolute;
+  padding: 2rem 2rem 1.75rem;
+  height: 26rem;
+  width: 18rem;
+  border: 1px solid var(--shape-stroke);
+}
+
+#pricing-container .pricing .card:hover {
+  background-color: var(--shape-hover);
+}
+
+#pricing-container .pricing .card.semestral > img {
+  position: absolute;
+  top: -3.2rem;
+}
+
+#pricing-container .pricing .card.semestral span {
+  color: var(--pink-light);
+}
+
+#pricing-container .pricing .card:nth-child(1),
+#pricing-container .pricing .card:nth-child(2),
+#pricing-container .pricing .card:nth-child(3) {
+  left: 35%;
+}
+
+#pricing-container .pricing .card:nth-child(1) header {
+  margin-bottom: 5rem;
+}
+
+#pricing-container .pricing .card:nth-child(2) {
+  z-index: 3;
+}
+
+#pricing-container .pricing .card:nth-child(2) header {
+  margin-bottom: 3rem;
+}
+
+#pricing-container .pricing .card:nth-child(3) header {
+  margin-bottom: 1rem;
+}
+
+#pricing-container .pricing .card header .description-price {
+  font: var(--body-sm);
+  color: var(--text-label);
+}
+
+#pricing-container .pricing .card header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+#pricing-container .pricing .card header > div span {
+  font: var(--title-sx);
+  color: var(--blue-light);
+}
+
+#pricing-container .pricing .card header lp-pricing {
+  font: var(--title-md);
+}
+
+#pricing-container .pricing .card header lp-pricing small {
+  font: var(--title-sx);
+}
+
+#pricing-container .pricing .card header p {
+  margin-top: 0.5rem;
+}
+
+#pricing-container .pricing .card ul {
+  margin-left: -0.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-body);
+  display: flex;
+  flex-direction: column;
+}
+
+#pricing-container .pricing .card ul li {
+  display: flex;
+  align-items: center;
+}
+
+#pricing-container .pricing .card ul li p {
+  color: var(--text-body);
+  font-family: Raleway;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+#pricing-container .pricing .card ul li img[src*="star"] {
+  display: block;
+}
+
+#pricing-container .pricing .card .btn {
+  width: 100%;
+}
+
+.pricing:hover .card:nth-child(1) {
+  transform: translateX(-18.5rem) translateY(2rem) rotate(-8deg);
+}
+
+.pricing:hover .card:nth-child(2) {
+  animation: Upcard 850ms ease forwards;
+}
+
+.pricing:hover .card:nth-child(3) {
+  transform: translateX(18.5rem) translateY(2rem) rotate(8deg);
+}
+
+.pricing:hover .card:nth-child(1),
+.pricing:hover .card:nth-child(2),
+.pricing:hover .card:nth-child(3) {
+  transition: transform 850ms ease;
+}
+
+.pricing:hover .card:nth-child(1):hover,
+.pricing:hover .card:nth-child(2):hover,
+.pricing:hover .card:nth-child(3):hover {
+  transition: all 650ms ease;
+  scale: 1.05;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 162, 255, 0.1);
+}
+
+@keyframes Upcard {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-2rem);
+  }
+}
+
+@media (width <= 48em) {
+  #pricing-container {
+    margin-top: 0rem;
+    margin-inline: auto;
+    max-width: 375px;
+  }
+
+  #pricing-container .pricing {
+    max-width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #pricing-container .pricing .card {
+    position: initial;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #pricing-container .pricing .card .btn {
+    margin-top: auto;
+  }
+
+  .pricing:hover .card:nth-child(1),
+  .pricing:hover .card:nth-child(2),
+  .pricing:hover .card:nth-child(3) {
+    transform: none;
+    transition: none;
+  }
+
+  @keyframes Upcard {
+    0% {
+      transform: none;
+    }
+
+    100% {
+      transform: none;
+    }
+  }
+
+  .card {
+    height: 25rem;
+  }
+}
