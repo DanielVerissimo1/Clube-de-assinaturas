@@ -1,4 +1,6 @@
 <h1 align="center"> 
+     <img width="190" height="auto" alt="logo" src="https://github.com/DanielVerissimo1/Clube-de-assinaturas/blob/main/assets/icons/logo-horizontal.svg?raw=true" />
+  <br>
   Encantos Literários
   <p>
     <img src="https://img.shields.io/github/last-commit/DanielVerissimo1/Clube-de-assinaturas?style=flat&logo=git&logoColor=white&color=d9d9d9" alt="Last Commit">
